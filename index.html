@@ -6,163 +6,110 @@
 <title>Arjun Cine Edits VFX | Premium Cinematic Studio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 :root{
 --gold:#d4af37;
 --dark:#0a0a0a;
 --card:#151515;
---gray:#aaa;
+--gray:#b0b0b0;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--dark);color:#fff;line-height:1.6;scroll-behavior:smooth;}
-a{text-decoration:none;color:inherit;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+body{background:var(--dark);color:#fff;line-height:1.6;}
 
-/* NAV */
 nav{
-position:fixed;top:0;width:100%;z-index:1000;
 display:flex;justify-content:space-between;align-items:center;
-padding:18px 8%;
-background:rgba(0,0,0,.9);
-border-bottom:1px solid rgba(212,175,55,.2);
+padding:20px 8%;background:#000;position:fixed;width:100%;top:0;z-index:999;
+border-bottom:1px solid rgba(212,175,55,.3)
 }
-.logo{font-family:'Playfair Display',serif;font-size:24px;}
+.logo{font-family:'Playfair Display';font-size:24px;}
 .logo span{color:var(--gold);}
-.nav-links{list-style:none;display:flex;}
+.nav-links{display:flex;list-style:none;}
 .nav-links li{margin-left:30px;}
-.nav-links a{text-transform:uppercase;font-size:13px;letter-spacing:1px;}
+.nav-links a{color:#fff;text-decoration:none;font-size:14px;text-transform:uppercase;}
 .nav-links a:hover{color:var(--gold);}
 
-/* HERO */
 .hero{
 height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
-url('https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2070') center/cover;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2070');
+background-size:cover;
 display:flex;flex-direction:column;justify-content:center;align-items:center;
 text-align:center;padding:0 20px;
 }
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:clamp(42px,8vw,80px);
-margin-bottom:20px;
+.hero h1{font-family:'Playfair Display';font-size:clamp(40px,8vw,80px);}
+.hero span{color:var(--gold);}
+.hero p{color:var(--gray);max-width:600px;margin:20px 0;}
+.cta-btn{
+background:var(--gold);color:#000;padding:15px 40px;
+text-decoration:none;font-weight:bold;border-radius:5px;
 }
-.hero h1 span{color:var(--gold);}
-.hero p{color:var(--gray);max-width:600px;margin-bottom:30px;}
-.hero a{
-padding:14px 38px;
-background:var(--gold);
-color:#000;font-weight:600;
-letter-spacing:1px;
-}
-
-/* SECTIONS */
 .section{padding:100px 8%;text-align:center;}
-.title{
-font-family:'Playfair Display',serif;
-font-size:40px;margin-bottom:50px;
-}
+.title{font-family:'Playfair Display';font-size:40px;margin-bottom:50px;}
 .title span{color:var(--gold);}
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
+
 .card{
-background:var(--card);
-padding:40px;border-radius:15px;
-border:1px solid #222;
-transition:.4s;
+background:var(--card);padding:40px;border-radius:15px;
+border:1px solid #222;transition:.3s;
 }
-.card:hover{
-transform:translateY(-10px);
-border-color:var(--gold);
-}
-.card i{font-size:42px;color:var(--gold);margin-bottom:20px;}
-.card p{color:var(--gray);font-size:14px;}
+.card:hover{border-color:var(--gold);transform:translateY(-8px);}
+.card i{font-size:45px;color:var(--gold);margin-bottom:20px;}
 
-/* PORTFOLIO */
-.portfolio-box{
-height:350px;border:2px dashed #333;
-border-radius:15px;
-display:flex;align-items:center;justify-content:center;
-color:#666;
+.portfolio-video{
+height:300px;background:#1a1a1a;border:2px dashed #333;
+border-radius:15px;display:flex;align-items:center;justify-content:center;
 }
 
-/* ===== CONTACT (PHOTO STYLE + ANIMATION) ===== */
-.contact-luxury{background:#000;padding:100px 8%;}
-.contact-wrap{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
+/* CONTACT SECTION */
+.luxury-contact{
+position:relative;
+background:url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover no-repeat;
+padding:100px 8%;
+}
+.contact-overlay{
+position:absolute;inset:0;background:rgba(0,0,0,.85);
+}
+.contact-wrapper{
+position:relative;z-index:2;
+display:grid;grid-template-columns:1fr;gap:40px;
+}
+.contact-info h2{font-size:40px;color:var(--gold);margin-bottom:15px;}
+.contact-info p{color:#ccc;font-size:14px;margin-bottom:20px;}
+.contact-info li{list-style:none;margin-bottom:10px;color:#bbb;}
+
+.contact-form{
+background:#0d0d0d;border:1px solid var(--gold);
+padding:30px;border-radius:15px;
+}
+.contact-form input,
+.contact-form select{
+width:100%;padding:12px;margin-bottom:14px;
+background:#000;border:1px solid #333;color:#fff;border-radius:8px;
+}
+.checkbox-group{
+display:grid;grid-template-columns:1fr 1fr;gap:8px;
+font-size:13px;color:#ccc;margin-bottom:14px;
+}
+.contact-form button{
+width:100%;padding:14px;background:var(--gold);
+border:none;font-weight:bold;cursor:pointer;
 }
 
-.contact-left{
-opacity:0;
-transform:translateX(-60px);
-animation:contactLeft 1.3s ease forwards;
-}
-.contact-left h2{
-font-family:'Playfair Display',serif;
-font-size:42px;margin-bottom:10px;
-}
-.contact-left span{color:var(--gold);}
-.contact-left p{color:var(--gray);margin-bottom:30px;}
-
-.contact-info p{
-margin-bottom:12px;font-size:15px;color:#ccc;
-}
-.contact-info i{color:var(--gold);margin-right:10px;}
-
-.contact-right{
-background:#111;
-padding:36px;border-radius:18px;
-border:1px solid #222;
-opacity:0;
-transform:translateY(60px);
-animation:contactRight 1.4s cubic-bezier(.19,1,.22,1) forwards;
-animation-delay:.3s;
-}
-.contact-right input{
-width:100%;padding:13px;margin-bottom:14px;
-background:#000;border:1px solid #333;
-color:#fff;border-radius:8px;
-}
-.services-check label{
-display:block;font-size:14px;color:#bbb;margin-bottom:6px;
-}
-.contact-right button{
-width:100%;padding:14px;
-background:var(--gold);
-border:none;font-weight:600;
-cursor:pointer;
-}
-
-/* FOOTER */
 footer{
-background:#000;padding:60px 8% 20px;
-text-align:center;border-top:1px solid #222;
-}
-.socials a{
-font-size:22px;margin:0 12px;
-}
-.socials a:hover{color:var(--gold);}
-footer p{font-size:12px;color:#444;margin-top:20px;}
-
-@keyframes contactLeft{
-to{opacity:1;transform:translateX(0);}
-}
-@keyframes contactRight{
-to{opacity:1;transform:translateY(0);}
+background:#000;padding:60px 8% 20px;text-align:center;
+border-top:1px solid #222;
 }
 
-@media(max-width:768px){
-.nav-links{display:none;}
-.contact-wrap{grid-template-columns:1fr;}
+@media(min-width:768px){
+.contact-wrapper{grid-template-columns:1fr 1fr;align-items:center;}
 }
 </style>
 </head>
@@ -170,77 +117,80 @@ to{opacity:1;transform:translateY(0);}
 <body>
 
 <nav>
-<div class="logo">ARJUN <span>CINEEDITS</span></div>
+<div class="logo">ARJUN<span>CINEEDITS</span></div>
 <ul class="nav-links">
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#portfolio">Work</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
 <section id="home" class="hero">
-<h1>Turning Moments Into <span>Cinema</span></h1>
-<p>Premium wedding films, luxury albums & cinematic editing.</p>
-<a href="#contact">Book Now</a>
+<h1>Transforming Moments<br>Into <span>Cinema</span></h1>
+<p>Premium Wedding Films, Cinematic Edits & VFX</p>
+<a href="https://wa.me/919315408016" class="cta-btn">Book Your Shoot</a>
 </section>
 
 <section id="services" class="section">
-<h2 class="title">Our <span>Services</span></h2>
+<h2 class="title">Our <span>Expertise</span></h2>
 <div class="grid">
-<div class="card"><i class="fas fa-camera"></i><p>Wedding Films</p></div>
-<div class="card"><i class="fas fa-film"></i><p>Video Editing</p></div>
-<div class="card"><i class="fas fa-images"></i><p>Album Designing</p></div>
+<div class="card"><i class="fas fa-camera"></i><h3>Wedding Films</h3></div>
+<div class="card"><i class="fas fa-magic"></i><h3>VFX & Post</h3></div>
+<div class="card"><i class="fas fa-film"></i><h3>Album Design</h3></div>
 </div>
 </section>
 
-<section id="portfolio" class="section" style="background:#0f0f0f;">
-<h2 class="title">Our <span>Portfolio</span></h2>
+<section id="portfolio" class="section" style="background:#0f0f0f">
+<h2 class="title">Featured <span>Work</span></h2>
 <div class="grid">
-<div class="portfolio-box">Portfolio Item</div>
-<div class="portfolio-box">Portfolio Item</div>
+<div class="portfolio-video">Video Coming Soon</div>
+<div class="portfolio-video">Cinematic Edit</div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact-luxury">
-<div class="contact-wrap">
+<section id="contact" class="luxury-contact">
+<div class="contact-overlay"></div>
 
-<div class="contact-left">
-<h2>Let’s Create <span>Magic</span></h2>
-<p>Luxury cinematic weddings & premium albums</p>
+<div class="contact-wrapper">
 <div class="contact-info">
-<p><i class="fas fa-envelope"></i> arjuncineditsvfx@gmail.com</p>
-<p><i class="fas fa-phone"></i> +91 9315408016</p>
-<p><i class="fab fa-instagram"></i> arjun.singh015</p>
-</div>
-</div>
-
-<div class="contact-right">
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Phone Number" required>
-<input type="email" placeholder="Email Address">
-
-<div class="services-check">
-<label><input type="checkbox"> Cinematic Shots</label>
-<label><input type="checkbox"> Video Editing</label>
-<label><input type="checkbox"> Album Designing</label>
+<h2>Contact Us</h2>
+<p>Book us for cinematic wedding films & premium albums.</p>
+<ul>
+<li>📍 India</li>
+<li>📞 +91 9315408016</li>
+<li>✉️ arjuncineditsvfx@gmail.com</li>
+</ul>
 </div>
 
-<button type="submit">Send Inquiry</button>
-</form>
+<div class="contact-form">
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<input type="tel" placeholder="Phone Number">
+<input type="date">
+
+<div class="checkbox-group">
+<label><input type="checkbox"> Wedding</label>
+<label><input type="checkbox"> Pre-Wedding</label>
+<label><input type="checkbox"> Cinematic Video</label>
+<label><input type="checkbox"> Album Design</label>
 </div>
 
+<select>
+<option>Budget</option>
+<option>50k – 1L</option>
+<option>1L – 2L</option>
+<option>2L+</option>
+</select>
+
+<button>Send Inquiry</button>
+</div>
 </div>
 </section>
 
 <footer>
-<div class="socials">
-<a href="https://instagram.com/arjun.singh015"><i class="fab fa-instagram"></i></a>
-<a href="https://wa.me/919315408016"><i class="fab fa-whatsapp"></i></a>
-</div>
-<p>© 2026 Arjun Cine Edits VFX</p>
+<p style="color:#555;font-size:12px">© 2026 Arjun Cine Edits VFX</p>
 </footer>
 
 </body>
