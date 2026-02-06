@@ -1,11 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Arjun Cine Edits VFX | Wedding Films & Albums</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#000;color:#fff;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+
+header{
+position:sticky;top:0;z-index:1000;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 20px;background:rgba(0,0,0,0.85);
+}
+header h1{font-size:1.1rem;color:#e50914;}
+nav a{margin-left:15px;font-size:0.75rem;color:#ccc;}
+nav a:hover{color:#e50914;}
+
+/* HERO */
+.hero{
+min-height:100vh;
+padding:100px 20px 40px;
+display:flex;align-items:center;
+background:
+linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.95)),
+url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center/cover;
+}
+.hero h2{font-size:2.2rem;margin-bottom:15px;}
+.hero p{font-size:0.9rem;color:#ccc;margin-bottom:25px;}
+.btn{
+display:inline-block;
+padding:12px 26px;
+background:#e50914;
+border:2px solid transparent;
+font-size:0.8rem;
+font-weight:600;
+text-transform:uppercase;
+transition:0.3s;
+}
+.btn:hover{
+background:transparent;
+border-color:#e50914;
 color:#e50914;
-margin-bottom:8px;
 }
 
-.card p{
-font-size:0.85rem;
-color:#bbb;
+section{padding:60px 20px;}
+section h3{text-align:center;font-size:1.8rem;margin-bottom:30px;}
+
+/* SERVICES */
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
 }
+.card{
+background:#111;
+border:1px solid #222;
+border-radius:14px;
+padding:25px;
+transition:0.4s;
+}
+.card:hover{
+transform:translateY(-8px);
+border-color:#e50914;
+box-shadow:0 8px 25px rgba(229,9,20,0.25);
+}
+.card h4{color:#e50914;margin-bottom:8px;}
+.card p{font-size:0.85rem;color:#bbb;}
 
 /* ABOUT */
 .about{
@@ -16,16 +81,48 @@ color:#ccc;
 font-size:0.9rem;
 }
 
-/* CONTACT */
-.contact{
-text-align:center;
+/* CONTACT FORM */
+.form-box{
+max-width:520px;
+margin:auto;
+background:#111;
+border:1px solid #222;
+border-radius:16px;
+padding:25px;
+}
+.form-box label{
+font-size:0.75rem;
+color:#aaa;
+display:block;
+margin-bottom:6px;
+}
+.form-box input{
+width:100%;
+padding:12px;
+margin-bottom:16px;
+background:#000;
+border:1px solid #333;
+border-radius:8px;
+color:#fff;
+font-size:0.85rem;
+}
+.form-box input:focus{
+outline:none;
+border-color:#e50914;
 }
 
-.contact p{
-margin-bottom:20px;
+.services h4{
 font-size:0.9rem;
+margin-bottom:10px;
 color:#ccc;
 }
+.service-option{
+display:flex;
+align-items:center;
+margin-bottom:10px;
+font-size:0.85rem;
+}
+.service-option input{margin-right:10px;}
 
 /* FOOTER */
 footer{
@@ -38,7 +135,6 @@ color:#777;
 
 /* DESKTOP */
 @media(min-width:768px){
-nav a{font-size:0.85rem;}
 .hero h2{font-size:3.2rem;}
 .hero p{font-size:1rem;}
 .grid{grid-template-columns:repeat(4,1fr);}
@@ -63,7 +159,7 @@ header{padding:20px 8%;}
 <div>
 <h2>Cinematic Wedding Films & Luxury Albums</h2>
 <p>Wedding films, pre-wedding shoots, premium album design and cinematic video editing with VFX.</p>
-<a href="#contact" class="btn">Book Now</a>
+<a href="#contact" class="btn">Contact Now</a>
 </div>
 </section>
 
@@ -84,11 +180,45 @@ header{padding:20px 8%;}
 </div>
 </section>
 
+<!-- CONTACT SECTION (UPDATED) -->
 <section id="contact">
-<h3>Contact</h3>
-<div class="contact">
-<p>Let’s create something cinematic together.</p>
-<a href="mailto:yourmail@gmail.com" class="btn">Email Us</a>
+<h3>Contact Us</h3>
+
+<div class="form-box">
+<form>
+
+<label>Your Name</label>
+<input type="text" placeholder="Enter your name" required>
+
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter phone number" required>
+
+<label>Email Address</label>
+<input type="email" placeholder="Enter email address">
+
+<div class="services">
+<h4>Select Required Services</h4>
+
+<div class="service-option">
+<input type="checkbox" id="c1">
+<label for="c1">Cinematic Shots</label>
+</div>
+
+<div class="service-option">
+<input type="checkbox" id="c2">
+<label for="c2">Video Editing</label>
+</div>
+
+<div class="service-option">
+<input type="checkbox" id="c3">
+<label for="c3">Album Designing</label>
+</div>
+</div>
+
+<br>
+<button type="submit" class="btn" style="width:100%;">Submit Inquiry</button>
+
+</form>
 </div>
 </section>
 
