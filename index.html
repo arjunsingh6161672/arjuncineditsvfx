@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Arjun Cine Edits VFX | Wedding Films & Albums</title>
+<title>Arjun Cine Edits VFX | Luxury Wedding Films</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,14 +12,23 @@
 body{background:#000;color:#fff;line-height:1.6;}
 a{text-decoration:none;color:inherit;}
 
+:root{
+--gold:#d4af37;
+--dark:#000;
+--card:#111;
+--border:#2a2a2a;
+}
+
+/* HEADER */
 header{
 position:sticky;top:0;z-index:1000;
 display:flex;justify-content:space-between;align-items:center;
-padding:15px 20px;background:rgba(0,0,0,0.85);
+padding:15px 20px;background:rgba(0,0,0,0.88);
+border-bottom:1px solid var(--border);
 }
-header h1{font-size:1.1rem;color:#e50914;}
+header h1{font-size:1.1rem;color:var(--gold);letter-spacing:1px;}
 nav a{margin-left:15px;font-size:0.75rem;color:#ccc;}
-nav a:hover{color:#e50914;}
+nav a:hover{color:var(--gold);}
 
 /* HERO */
 .hero{
@@ -28,51 +36,54 @@ min-height:100vh;
 padding:100px 20px 40px;
 display:flex;align-items:center;
 background:
-linear-gradient(to bottom,rgba(0,0,0,0.75),rgba(0,0,0,0.95)),
+linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.95)),
 url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center/cover;
 }
-.hero h2{font-size:2.3rem;margin-bottom:15px;}
-.hero p{font-size:0.9rem;color:#ccc;margin-bottom:25px;}
+.hero h2{font-size:2.4rem;margin-bottom:15px;}
+.hero p{font-size:0.95rem;color:#ccc;margin-bottom:25px;}
+
 .btn{
 display:inline-block;
-padding:12px 28px;
-background:#e50914;
+padding:13px 30px;
+background:var(--gold);
 border:2px solid transparent;
 font-size:0.8rem;
 font-weight:600;
 letter-spacing:1px;
 text-transform:uppercase;
-transition:0.3s;
-border-radius:30px;
+transition:0.35s;
+border-radius:40px;
+color:#000;
 }
 .btn:hover{
 background:transparent;
-border-color:#e50914;
-color:#e50914;
+border-color:var(--gold);
+color:var(--gold);
+box-shadow:0 0 20px rgba(212,175,55,0.4);
 }
 
-section{padding:70px 20px;}
-section h3{text-align:center;font-size:1.9rem;margin-bottom:35px;}
+section{padding:80px 20px;}
+section h3{text-align:center;font-size:1.9rem;margin-bottom:35px;color:var(--gold);}
 
 /* SERVICES */
 .grid{
 display:grid;
 grid-template-columns:1fr;
-gap:20px;
+gap:22px;
 }
 .card{
-background:#111;
-border:1px solid #222;
-border-radius:16px;
-padding:28px;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+padding:30px;
 transition:0.4s;
 }
 .card:hover{
 transform:translateY(-10px);
-border-color:#e50914;
-box-shadow:0 10px 30px rgba(229,9,20,0.25);
+border-color:var(--gold);
+box-shadow:0 15px 35px rgba(212,175,55,0.25);
 }
-.card h4{color:#e50914;margin-bottom:10px;}
+.card h4{color:var(--gold);margin-bottom:10px;}
 .card p{font-size:0.85rem;color:#bbb;}
 
 /* ABOUT */
@@ -84,33 +95,32 @@ color:#ccc;
 font-size:0.9rem;
 }
 
-/* CONTACT PREMIUM */
+/* CONTACT */
 .contact-wrap{
 max-width:620px;
 margin:auto;
-background:linear-gradient(145deg,#111,#0b0b0b);
-border:1px solid #222;
-border-radius:22px;
-padding:30px;
-box-shadow:0 20px 60px rgba(0,0,0,0.7);
+background:linear-gradient(145deg,#0d0d0d,#050505);
+border:1px solid var(--border);
+border-radius:24px;
+padding:32px;
+box-shadow:0 30px 80px rgba(0,0,0,0.8);
 }
 
 .contact-top{
 text-align:center;
-margin-bottom:25px;
+margin-bottom:28px;
 }
-
 .contact-top p{
 font-size:0.9rem;
 color:#bbb;
 margin-bottom:8px;
 }
-
 .contact-top a{
-color:#e50914;
+color:var(--gold);
 font-weight:600;
 }
 
+/* FORM */
 .form-box label{
 font-size:0.75rem;
 color:#aaa;
@@ -119,22 +129,22 @@ margin-bottom:6px;
 }
 .form-box input{
 width:100%;
-padding:13px;
+padding:14px;
 margin-bottom:16px;
 background:#000;
 border:1px solid #333;
-border-radius:10px;
+border-radius:12px;
 color:#fff;
 font-size:0.85rem;
 }
 .form-box input:focus{
 outline:none;
-border-color:#e50914;
+border-color:var(--gold);
 }
 
 .services h4{
 font-size:0.9rem;
-margin:10px 0;
+margin:12px 0;
 color:#ccc;
 }
 .service-option{
@@ -148,20 +158,22 @@ color:#bbb;
 
 /* FOOTER */
 footer{
-padding:20px;
+padding:25px;
 text-align:center;
-background:#111;
+background:#0b0b0b;
 font-size:0.75rem;
 color:#777;
+border-top:1px solid var(--border);
 }
+footer a{color:var(--gold);}
 
 /* DESKTOP */
 @media(min-width:768px){
-.hero h2{font-size:3.4rem;}
-.hero p{font-size:1rem;}
+.hero h2{font-size:3.6rem;}
+.hero p{font-size:1.05rem;}
 .grid{grid-template-columns:repeat(4,1fr);}
-section{padding:100px 8%;}
-header{padding:20px 8%;}
+section{padding:110px 8%;}
+header{padding:22px 8%;}
 }
 </style>
 </head>
@@ -179,8 +191,8 @@ header{padding:20px 8%;}
 
 <section class="hero">
 <div>
-<h2>Cinematic Wedding Films & Luxury Albums</h2>
-<p>Wedding films, pre-wedding shoots, premium album design and cinematic video editing with VFX.</p>
+<h2>Luxury Cinematic Wedding Films & Albums</h2>
+<p>High-end wedding films, premium albums & cinematic visuals crafted with elegance.</p>
 <a href="#contact" class="btn">Book Your Date</a>
 </div>
 </section>
@@ -188,78 +200,67 @@ header{padding:20px 8%;}
 <section id="services">
 <h3>Services</h3>
 <div class="grid">
-<div class="card"><h4>Wedding Films</h4><p>Cinematic storytelling with emotions.</p></div>
-<div class="card"><h4>Pre-Wedding</h4><p>Creative concepts & cinematic visuals.</p></div>
-<div class="card"><h4>Wedding Albums</h4><p>Luxury album design & layouts.</p></div>
-<div class="card"><h4>Editing & VFX</h4><p>Professional cinematic editing.</p></div>
+<div class="card"><h4>Wedding Films</h4><p>Luxury cinematic storytelling.</p></div>
+<div class="card"><h4>Pre-Wedding</h4><p>Creative & elegant visuals.</p></div>
+<div class="card"><h4>Wedding Albums</h4><p>Premium album designs.</p></div>
+<div class="card"><h4>Editing & VFX</h4><p>High-end cinematic edits.</p></div>
 </div>
 </section>
 
 <section id="about">
 <h3>About</h3>
 <div class="about">
-<p>Arjun Cine Edits VFX creates timeless wedding films and premium albums that preserve emotions forever.</p>
+<p>Arjun Cine Edits VFX specializes in luxury wedding films and premium albums, crafted for timeless elegance.</p>
 </div>
 </section>
 
 <section id="contact">
-<h3>Contact Us</h3>
+<h3>Contact</h3>
 
 <div class="contact-wrap">
 
 <div class="contact-top">
-<p>📧 Email: <a href="mailto:arjuncineditsvfx@gmail.com">arjuncineditsvfx@gmail.com</a></p>
-<p>📞 Call / WhatsApp: <a href="https://wa.me/919315408016">+91 9315408016</a></p>
+<p>📧 <a href="mailto:arjuncineditsvfx@gmail.com">arjuncineditsvfx@gmail.com</a></p>
+<p>📞 <a href="https://wa.me/919315408016">+91 9315408016</a></p>
+<p>📸 Instagram: <a href="https://instagram.com/arjun.singh015" target="_blank">@arjun.singh015</a></p>
 </div>
 
 <form onsubmit="sendWhatsApp(); return false;" class="form-box">
 
 <label>Your Name</label>
-<input type="text" id="name" placeholder="Enter your name" required>
+<input type="text" id="name" required>
 
 <label>Phone Number</label>
-<input type="tel" id="phone" placeholder="Enter phone number" required>
+<input type="tel" id="phone" required>
 
-<label>Email Address</label>
-<input type="email" id="email" placeholder="Enter email address">
+<label>Email</label>
+<input type="email" id="email">
 
 <div class="services">
-<h4>Select Required Services</h4>
-
-<div class="service-option">
-<input type="checkbox" value="Cinematic Shots">
-<span>Cinematic Shots</span>
-</div>
-<div class="service-option">
-<input type="checkbox" value="Video Editing">
-<span>Video Editing</span>
-</div>
-<div class="service-option">
-<input type="checkbox" value="Album Designing">
-<span>Album Designing</span>
-</div>
+<h4>Select Services</h4>
+<div class="service-option"><input type="checkbox" value="Cinematic Shots">Cinematic Shots</div>
+<div class="service-option"><input type="checkbox" value="Video Editing">Video Editing</div>
+<div class="service-option"><input type="checkbox" value="Album Designing">Album Designing</div>
 </div>
 
 <br>
-<button type="submit" class="btn" style="width:100%;">Send Inquiry</button>
+<button class="btn" style="width:100%;">Send Inquiry</button>
 </form>
 
 </div>
 </section>
 
 <footer>
-© 2026 Arjun Cine Edits VFX • Wedding Films • Albums • Cinematic Visuals
+© 2026 Arjun Cine Edits VFX •  
+<a href="https://instagram.com/arjun.singh015" target="_blank">Instagram</a>
 </footer>
 
 <script>
 function sendWhatsApp(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let email=document.getElementById("email").value;
-let services=[];
-document.querySelectorAll('input[type="checkbox"]:checked').forEach(e=>services.push(e.value));
-let msg=`New Wedding Inquiry%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AServices: ${services.join(", ")}`;
-window.open("https://wa.me/919315408016?text="+msg,"_blank");
+let n=name.value,p=phone.value,e=email.value;
+let s=[...document.querySelectorAll('input[type=checkbox]:checked')].map(x=>x.value);
+let m=`Luxury Wedding Inquiry%0AName: ${n}%0APhone: ${p}%0AEmail: ${e}%0AServices: ${s.join(", ")}`;
+window.open("https://wa.me/919315408016?text="+m,"_blank");
 }
 </script>
 
